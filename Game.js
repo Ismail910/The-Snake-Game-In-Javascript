@@ -15,6 +15,8 @@ function main(currentTime)
 
     Update();
     drow();
+
+    console.log();
 }
 
 window.requestAnimationFrame(main);
