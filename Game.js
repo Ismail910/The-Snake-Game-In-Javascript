@@ -1,4 +1,13 @@
-let Snake_spede = 1 ;
+import {Snake_spede ,Update_Snake , Drow_Snake} from "./Snake.js"
+
+const KyeWord = [{
+     Fname:"Ahmed",
+     Lname:"Mohamed"
+}]
+console.log(KyeWord[0].Fname);
+
+
+let gameBoard = document.getElementById("game_bord")
 let lastRenderTime = 0;
 function main(currentTime)
 {
@@ -7,9 +16,9 @@ function main(currentTime)
    
     if (secondsSinceLastRender < 1 / Snake_spede)
    return;
-//    console.log(secondsSinceLastRender);
-//    console.log(currentTime);
-//    console.log(lastRenderTime);
+    //    console.log(secondsSinceLastRender);
+   //console.log(currentTime);
+    //    console.log(lastRenderTime);
    
     lastRenderTime = currentTime;
 
@@ -23,10 +32,13 @@ window.requestAnimationFrame(main);
 
 function Update()
 {
-    //console.log("he");
+    gameBoard.innerHTML = " ";
+    Update_Snake()
+
 }
 
 function drow ()
 {
-   // console.log(" i'am");
+   Drow_Snake(gameBoard)
+
 }
